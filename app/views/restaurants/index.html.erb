@@ -1,0 +1,18 @@
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12">
+      <h1>Restaurant app</h1>
+      <%= link_to "Add a new restaurant", new_restaurant_path %>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-xs-12 col-sm-4">
+      <% @restaurants.each do |r| %>
+        <h3> <%= link_to r.name, restaurant_path(r) %></h3>
+        <p> <%= r.address %></p>
+        <p> <%= r.phone_number %></p>
+        <p> <%= r.category %></p>
+      <% end %>
+    </div>
+  </div>
+</div>
